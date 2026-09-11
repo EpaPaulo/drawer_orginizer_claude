@@ -36,9 +36,9 @@ jobs:
 
       - run: npm run build
 
+      # Requer o Pages já ligado em Definições → Pages → Source: GitHub Actions.
+      # O token do workflow não tem permissão para o ligar sozinho.
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
