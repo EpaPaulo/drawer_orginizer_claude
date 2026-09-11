@@ -3,6 +3,8 @@
 Transforma uma gaveta de casa num conjunto de caixas modulares à medida,
 prontas a imprimir em 3D.
 
+**Testar online: <https://organiza-gavetas.netlify.app>**
+
 A app é a implementação da proposta UI/UX **“gavetas de casa”**. O modo de
 ferramentas (tracing de contornos) ficou de fora desta versão.
 
@@ -68,6 +70,19 @@ npm run preview    # serve o build
 npm test           # testes do solver e da geração de STL
 npm run typecheck
 ```
+
+## Publicar
+
+A versão em linha está no Netlify. Para atualizar, correr `npm run build` e
+arrastar a pasta `dist/` (ou um zip do seu conteúdo) para
+<https://app.netlify.com/drop>, no site já reclamado.
+
+Há também um workflow para GitHub Pages em `.github/workflows/deploy.yml`, que
+instala, corre os testes e publica o `dist/`. Falha no último passo enquanto o
+Pages não estiver ligado em **Definições → Pages → Source: GitHub Actions** — o
+token do workflow não tem permissão para o ligar sozinho. Como o `base: './'` do
+Vite gera caminhos relativos, a app funciona tal e qual sob o subcaminho do
+Pages, sem alterações.
 
 ## Estrutura
 
