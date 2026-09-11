@@ -3,8 +3,6 @@
 Transforma uma gaveta de casa num conjunto de caixas modulares à medida,
 prontas a imprimir em 3D.
 
-**Testar online: <https://organiza-gavetas.netlify.app>**
-
 A app é a implementação da proposta UI/UX **“gavetas de casa”**. O modo de
 ferramentas (tracing de contornos) ficou de fora desta versão.
 
@@ -73,9 +71,9 @@ npm run typecheck
 
 ## Publicar
 
-A versão em linha está no Netlify. Para atualizar, correr `npm run build` e
-arrastar a pasta `dist/` (ou um zip do seu conteúdo) para
-<https://app.netlify.com/drop>, no site já reclamado.
+Para pôr a app em linha: correr `npm run build` e arrastar a pasta `dist/` (ou
+um zip do seu conteúdo) para <https://app.netlify.com/drop>. Reclamando o site,
+o endereço fica fixo e as versões seguintes substituem a anterior.
 
 Há também um workflow para GitHub Pages em `.github/workflows/deploy.yml`, que
 instala, corre os testes e publica o `dist/`. Falha no último passo enquanto o
