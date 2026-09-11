@@ -36,10 +36,9 @@ jobs:
 
       - run: npm run build
 
-      # Requer o Pages já ligado em Definições → Pages → Source: GitHub Actions.
-      # O token do workflow não tem permissão para o ligar sozinho.
-      - uses: actions/configure-pages@v5
-
+      # Sem `configure-pages`: só serve para calcular o caminho base, e o
+      # `base: './'` do Vite já gera tudo relativo. Assim o publicação deixa de
+      # depender de o site de Pages já existir — o deploy-pages trata disso.
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
